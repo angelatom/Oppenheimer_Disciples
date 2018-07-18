@@ -6,16 +6,19 @@ boolean gameEnd = false;  // initialize gameEnd
 
 void setup(){
   size(1024, 768); // sets the dimensions for the game window
-  start = loadImage("start3.jpg"); // load the start image
+  // load all of the images
+  start = loadImage("start3.jpg"); 
 }
 
 void draw(){
   if(gameStart){
      image(start, 0, 0, 1024, 768);
      textSize(50);
+     fill(19);
      text("CLICK ANYWHERE TO START", 150, 400);     
   } else {
     background(0); 
+   
   }
 }
 
