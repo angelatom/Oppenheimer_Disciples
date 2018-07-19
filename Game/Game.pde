@@ -10,6 +10,7 @@ PImage three;
 int posOne;
 int posTwo;
 int posThree;
+int[] randPos;
 
 void setup(){
   size(1024, 768); // sets the dimensions for the game window
@@ -22,6 +23,7 @@ void setup(){
       three = plants.getRandBadImg();
     }
     one = plants.getRandGoodImg();
+    randPos = new int[3];
     posOne = 50;
     posTwo = 362;
     posThree = 674;
@@ -35,8 +37,11 @@ void draw(){
      fill(19);
      text("CLICK ANYWHERE TO START", 150, 400);     
   } else {
-    background(140); 
+    background(#f0ffff); 
     // Testing images
+    textSize(50);
+    fill(0);
+    text("Click the non-poisonous plant.", 150, 100);
     image(one, posOne , 200, 300, 300);
     image(two, posTwo, 200, 300, 300);
     image(three, posThree, 200, 300, 300);
